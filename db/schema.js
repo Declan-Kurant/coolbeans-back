@@ -1,14 +1,5 @@
 const mongoose = require('./connection')
 
-const CoffeeSchema = new mongoose.Schema({
-	name: String,
-	region: String,
-	country: String,
-	imgUrl: String,
-	description: String,
-	flavorProfile: [FlavorProfile]
-})
-
 const FlavorProfileSchema = new mongoose.Schema({
 	body: {
 		type: String,
@@ -31,6 +22,15 @@ const FlavorProfileSchema = new mongoose.Schema({
 		isFloral: Boolean,
 		isWeird: Boolean
 	}
+})
+
+const CoffeeSchema = new mongoose.Schema({
+	name: String,
+	region: String,
+	country: String,
+	imgUrl: String,
+	description: String,
+	flavorProfile: [FlavorProfileSchema]
 })
 
 const Coffee = mongoose.model('Coffee', CoffeeSchema)
