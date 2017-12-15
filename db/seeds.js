@@ -2,6 +2,9 @@ const Coffee = require('./schema')
 const FlavorProfile = require('./schema')
 const Coffee = require('./schema')
 
+// The Americas
+// Africa
+// India & The Pacific
 const IndonesiaFlavorProfile = new FlavorProfile({
 	body: 'Full',
 	acidity: 'Low',
