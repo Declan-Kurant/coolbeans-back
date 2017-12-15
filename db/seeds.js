@@ -305,6 +305,155 @@ const Jamaica = new Coffee({
 })
 
 // Africa
+const EthiopiaFlavorProfile= new FlavorProfile({
+	body: 'Full',
+	acidity: 'Low',
+	notes: {
+		isFruity: true,
+		isSour:false,
+		isVeggie:false,
+		isRoasted:false,
+		isSpicy:false,
+		isNuttyCocoa:false,
+		isSweet:false,
+		isFloral: true,
+		isWeird:false,
+  }
+})
+const Ethiopia = new Coffee({
+  name:"Ethiopia",
+	region: "Africa",
+	country:"Ethiopia",
+	img_url:"#",
+	description: "Harrar
+                Harrar coffees are dry-processed coffees and tend to come from old varietal typica coffee trees. These coffees are noted for their big body and sometimes extremely wild fruity finish.
+
+                Sidamo/Yirgacheffe
+                Sidamo and Yirgacheffe coffees are for the most part wet-processed coffees and both tend to have a floral/berry finish going for them depending on the given crop year.
+                ",
+	flavorProfile: [EthiopiaFlavorProfile]
+})
+
+const KenyaFlavorProfile = new FlavorProfile ({
+	body: 'Balanced',
+	acidity: 'High',
+	notes: {
+	  isFruity: true,
+		isSour: true,
+		isVeggie: false,
+		isRoasted: false,
+		isSpicy: false,
+		isNuttyCocoa: false,
+		isSweet: false,
+		isFloral: false,
+		isWeird: false,
+	}
+})
+const Kenya = new Coffee ({
+	name: 'Kenya',
+	region: 'Africa',
+	country: 'Kenya',
+	imgUrl: '#',
+	description: 'Few display the shadow defects and off-tastes that often mar coffees from other origins.,'
+	flavorProfile: [KenyaFlavorProfile]
+})
+
+const TanzaniaFlavorProfile = new FlavorProfile ({
+	body: 'Balanced',
+	acidity: 'High',
+	notes: {
+	  isFruity: true,
+		isSour: true,
+		isVeggie: false,
+		isRoasted: true,
+		isSpicy: false,
+		isNuttyCocoa: true,
+		isSweet: false,
+		isFloral: false,
+		isWeird: true,
+	}
+})
+const Tanzania = new Coffee ({
+	name: 'Tanzania',
+	region: 'Africa',
+	country: 'Tanzania',
+	imgUrl: '#',
+	description: 'It is important to note that Tanzania is known for a particular type of coffee bean, peaberry, that results from the cherry of the coffee plant containing just a single round bean rather than 2 flat-sided half beans. Many believe this produces an enhanced flavor.',
+	flavorProfile: [TanzaniaFlavorProfile]
+})
+
+const CongoFlavorProfile = new FlavorProfile ({
+	body: 'Full',
+	acidity: 'High',
+	notes: {
+	  isFruity: true,
+		isSour: false,
+		isVeggie: false,
+		isRoasted: false,
+		isSpicy: false,
+		isNuttyCocoa: true,
+		isSweet: false,
+		isFloral: false,
+		isWeird: false,
+	}
+})
+const Congo = new Coffee ({
+	name: 'Congo',
+	region: 'Africa',
+	country: 'Congo',
+	imgUrl: '#',
+	description: 'typically dry harvest',
+	flavorProfile: [CongoFlavorProfile]
+})
+
+const UgandaFlavorProfile = new FlavorProfile ({
+	body: 'Balanced',
+	acidity: 'High',
+	notes: {
+	  isFruity: true,
+		isSour: false,
+		isVeggie: true,
+		isRoasted: false,
+		isSpicy: false,
+		isNuttyCocoa: false,
+		isSweet: false,
+		isFloral: true,
+		isWeird: false,
+	}
+})
+const Uganda = new Coffee ({
+	name: 'Uganda',
+	region: 'Africa',
+	country: 'Uganda',
+	imgUrl: '#',
+	description: '#',
+	flavorProfile: [UgandaFlavorProfile]
+})
+
+const BurundiFlavorProfile = new FlavorProfile ({
+	body: 'Full',
+	acidity: 'High',
+	notes: {
+	  isFruity: false,
+		isSour: true,
+		isVeggie: false,
+		isRoasted: false,
+		isSpicy: false,
+		isNuttyCocoa: true,
+		isSweet: true,
+		isFloral: true,
+		isWeird: false,
+	}
+})
+const Burundi = new Coffee ({
+	name: 'Burundi',
+	region: 'Africa',
+	country: 'Burundi',
+	imgUrl: '#',
+	description: '#',
+	flavorProfile: [BurundiFlavorProfile]
+})
+
 const CameroonFlavorProfile = new FlavorProfile({
 	body: 'Full',
 	acidity: 'Low',
@@ -355,6 +504,8 @@ const Rwanda = new Coffee({
 	flavorProfile: [RwandaFlavorProfile]
 })
 
+
+
 // India & The Pacific
 const IndonesiaFlavorProfile = new FlavorProfile({
 	body: 'Full',
@@ -371,7 +522,6 @@ const IndonesiaFlavorProfile = new FlavorProfile({
 		isWeird: false
 	}
 })
-
 const Indonesia = new Coffee({
 	name: 'Indonesia',
 	region: 'India & The Pacific',
