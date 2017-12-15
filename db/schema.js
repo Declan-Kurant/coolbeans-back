@@ -11,14 +11,14 @@ const CoffeeSchema = new mongoose.Schema({
 
 const FlavorProfileSchema = new mongoose.Schema({
 	body: {
-		isFull: Boolean,
-		isBal: Boolean,
-		isLight: Boolean
+		type: String,
+		enum: ['Light', 'Balanced', 'Full'],
+		required: [true, 'Please specify Light, Balanced, or Full for body.']
 	},
 	acidity: {
-		isHigh: Boolean,
-		isMed: Boolean,
-		isLow: Boolean
+		type: String,
+		enum: ['Low', 'Medium', 'High'],
+		required: [true, 'Please pick Low, Medium, or High for acidity.']
 	},
 	notes: {
 		isFruity: Boolean,
