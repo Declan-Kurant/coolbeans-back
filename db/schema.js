@@ -6,7 +6,7 @@ const CoffeeSchema = new mongoose.Schema({
 	country: String,
 	imgUrl: String,
 	description: String,
-	flavorProfile: FlavorProfile
+	flavorProfile: [FlavorProfile]
 })
 
 const FlavorProfileSchema = new mongoose.Schema({
