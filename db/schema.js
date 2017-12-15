@@ -1,4 +1,4 @@
-const mongoose = require('./connection.js')
+const mongoose = require('./connection')
 
 const CoffeeSchema = new mongoose.Schema({
 	name: String,
@@ -34,5 +34,9 @@ const FlavorProfileSchema = new mongoose.Schema({
 })
 
 const Coffee = mongoose.model('Coffee', CoffeeSchema)
-
 const FlavorProfile = mongoose.model('FlavorProfile', FlavorProfileSchema)
+
+module.exports = {
+	Coffee,
+	FlavorProfile
+}
