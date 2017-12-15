@@ -325,12 +325,7 @@ const Ethiopia = new Coffee({
 	region: "Africa",
 	country:"Ethiopia",
 	img_url:"#",
-	description: "Harrar
-                Harrar coffees are dry-processed coffees and tend to come from old varietal typica coffee trees. These coffees are noted for their big body and sometimes extremely wild fruity finish.
-
-                Sidamo/Yirgacheffe
-                Sidamo and Yirgacheffe coffees are for the most part wet-processed coffees and both tend to have a floral/berry finish going for them depending on the given crop year.
-                ",
+	description: "Harrar coffees are dry-processed coffees and tend to come from old varietal typica coffee trees. These coffees are noted for their big body and sometimes extremely wild fruity finish. Sidamo and Yirgacheffe coffees are for the most part wet-processed coffees and both tend to have a floral/berry finish going for them depending on the given crop year.",
 	flavorProfile: [EthiopiaFlavorProfile]
 })
 
