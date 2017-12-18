@@ -5,7 +5,7 @@ const mongoose = require('./db/schema')
 
 const app = express()
 
-const Coffee = mongoose.moel('Coffee')
+const Coffee = mongoose.model('Coffee')
 
 app.use(parser.json())
 app.use(cors())
@@ -44,7 +44,7 @@ app.post('/coffees', (req, res) => {
 		})
 })
 
-app.delete('/coffes/:id', (req, res) => {
+app.delete('/coffees/:id', (req, res) => {
 	Thing.findByIdAndRemove(req.params.id)
 		.then(coffee => {
 			res.json(coffee)
