@@ -28,7 +28,7 @@ app.get('/coffees', (req, res) => {
 app.get('coffees/:id', (req, res) => {
 	Coffee.findById(req.params.id)
 		.then(coffee => {
-			res.json(thing)
+			res.json(coffee)
 		})
 		.catch(err => {
 			console.log(err)
