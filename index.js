@@ -5,11 +5,63 @@ const mongoose = require('./db/schema')
 
 const app = express()
 
+const Coffee = mongoose.moel('Coffee')
+
 app.use(parser.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-	res.send('hello world')
+	res.redirect('/welcome')
+})
+
+app.get('/coffees', (req, res) => {
+	Coffee.find()
+		.then(coffees => {
+			res.json(coffees)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+})
+
+app.get('coffees/:id', (req, res) => {
+	Coffee.findById(req.params.id)
+		.then(thing => {
+			res.json(thing)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+})
+
+app.post('/coffees', (req, res) => {
+	Coffee.create(req.body)
+		.then(coffee => {
+			res.json(coffee)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+})
+
+app.delete('/coffes/:id', (req, res) => {
+	Thing.findByIdAndRemove(req.params.id)
+		.then(coffee => {
+			res.json(coffee)
+		})
+		.catch(err => {
+			console.log(err)
+		})
+})
+
+app.put('/coffees/:id', (req, res) => {
+	Coffee.findByIdAndUpdate(req.body)
+		.then(coffee => {
+			res.json(coffee)
+		})
+		.catch(err => {
+			console.log(err)
+		})
 })
 
 app.listen(3001, () => {
