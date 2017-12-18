@@ -1,9 +1,9 @@
-const Coffee = require('./schema')
-const FlavorProfile = require('./schema')
-const Coffee = require('./schema')
+const Schema = require('./schema')
 
-// The Americas
+const Coffee = Schema.Coffee
+const FlavorProfile = Schema.FlavorProfile
 
+// Americas
 const HawaiiFlavorProfile = new FlavorProfile({
 	body: 'Balanced',
 	acidity: 'Medium',
@@ -45,13 +45,13 @@ const GuatemalaFlavorProfile = new FlavorProfile({
 	}
 })
 
-const CostaRica = new Coffee({
-	name: 'Costa Rica',
+const Guatemala = new Coffee({
+	name: 'Guatemala',
 	region: 'Americas',
-	country: 'Costa Rica',
+	country: 'Guatemala',
 	imgUrl: '#',
 	description: '#',
-	flavorProfile: [CostaRicaFlavorProfile]
+	flavorProfile: [GuatemalaFlavorProfile]
 })
 
 const CostaRicaFlavorProfile = new FlavorProfile({
@@ -305,35 +305,36 @@ const Jamaica = new Coffee({
 })
 
 // Africa
-const EthiopiaFlavorProfile= new FlavorProfile({
+const EthiopiaFlavorProfile = new FlavorProfile({
 	body: 'Full',
 	acidity: 'Low',
 	notes: {
 		isFruity: true,
-		isSour:false,
-		isVeggie:false,
-		isRoasted:false,
-		isSpicy:false,
-		isNuttyCocoa:false,
-		isSweet:false,
+		isSour: false,
+		isVeggie: false,
+		isRoasted: false,
+		isSpicy: false,
+		isNuttyCocoa: false,
+		isSweet: false,
 		isFloral: true,
-		isWeird:false,
-  }
+		isWeird: false
+	}
 })
 const Ethiopia = new Coffee({
-  name:"Ethiopia",
-	region: "Africa",
-	country:"Ethiopia",
-	img_url:"#",
-	description: "Harrar coffees are dry-processed coffees and tend to come from old varietal typica coffee trees. These coffees are noted for their big body and sometimes extremely wild fruity finish. Sidamo and Yirgacheffe coffees are for the most part wet-processed coffees and both tend to have a floral/berry finish going for them depending on the given crop year.",
+	name: 'Ethiopia',
+	region: 'Africa',
+	country: 'Ethiopia',
+	img_url: '#',
+	description:
+		'Harrar coffees are dry-processed coffees and tend to come from old varietal typica coffee trees. These coffees are noted for their big body and sometimes extremely wild fruity finish. Sidamo and Yirgacheffe coffees are for the most part wet-processed coffees and both tend to have a floral/berry finish going for them depending on the given crop year.',
 	flavorProfile: [EthiopiaFlavorProfile]
 })
 
-const KenyaFlavorProfile = new FlavorProfile ({
+const KenyaFlavorProfile = new FlavorProfile({
 	body: 'Balanced',
 	acidity: 'High',
 	notes: {
-	  isFruity: true,
+		isFruity: true,
 		isSour: true,
 		isVeggie: false,
 		isRoasted: false,
@@ -341,23 +342,24 @@ const KenyaFlavorProfile = new FlavorProfile ({
 		isNuttyCocoa: false,
 		isSweet: false,
 		isFloral: false,
-		isWeird: false,
+		isWeird: false
 	}
 })
-const Kenya = new Coffee ({
+const Kenya = new Coffee({
 	name: 'Kenya',
 	region: 'Africa',
 	country: 'Kenya',
 	imgUrl: '#',
-	description: 'Few display the shadow defects and off-tastes that often mar coffees from other origins.,'
+	description:
+		'Few display the shadow defects and off-tastes that often mar coffees from other origins.',
 	flavorProfile: [KenyaFlavorProfile]
 })
 
-const TanzaniaFlavorProfile = new FlavorProfile ({
+const TanzaniaFlavorProfile = new FlavorProfile({
 	body: 'Balanced',
 	acidity: 'High',
 	notes: {
-	  isFruity: true,
+		isFruity: true,
 		isSour: true,
 		isVeggie: false,
 		isRoasted: true,
@@ -365,23 +367,24 @@ const TanzaniaFlavorProfile = new FlavorProfile ({
 		isNuttyCocoa: true,
 		isSweet: false,
 		isFloral: false,
-		isWeird: true,
+		isWeird: true
 	}
 })
-const Tanzania = new Coffee ({
+const Tanzania = new Coffee({
 	name: 'Tanzania',
 	region: 'Africa',
 	country: 'Tanzania',
 	imgUrl: '#',
-	description: 'It is important to note that Tanzania is known for a particular type of coffee bean, peaberry, that results from the cherry of the coffee plant containing just a single round bean rather than 2 flat-sided half beans. Many believe this produces an enhanced flavor.',
+	description:
+		'It is important to note that Tanzania is known for a particular type of coffee bean, peaberry, that results from the cherry of the coffee plant containing just a single round bean rather than 2 flat-sided half beans. Many believe this produces an enhanced flavor.',
 	flavorProfile: [TanzaniaFlavorProfile]
 })
 
-const CongoFlavorProfile = new FlavorProfile ({
+const CongoFlavorProfile = new FlavorProfile({
 	body: 'Full',
 	acidity: 'High',
 	notes: {
-	  isFruity: true,
+		isFruity: true,
 		isSour: false,
 		isVeggie: false,
 		isRoasted: false,
@@ -389,10 +392,10 @@ const CongoFlavorProfile = new FlavorProfile ({
 		isNuttyCocoa: true,
 		isSweet: false,
 		isFloral: false,
-		isWeird: false,
+		isWeird: false
 	}
 })
-const Congo = new Coffee ({
+const Congo = new Coffee({
 	name: 'Congo',
 	region: 'Africa',
 	country: 'Congo',
@@ -401,11 +404,11 @@ const Congo = new Coffee ({
 	flavorProfile: [CongoFlavorProfile]
 })
 
-const UgandaFlavorProfile = new FlavorProfile ({
+const UgandaFlavorProfile = new FlavorProfile({
 	body: 'Balanced',
 	acidity: 'High',
 	notes: {
-	  isFruity: true,
+		isFruity: true,
 		isSour: false,
 		isVeggie: true,
 		isRoasted: false,
@@ -413,10 +416,10 @@ const UgandaFlavorProfile = new FlavorProfile ({
 		isNuttyCocoa: false,
 		isSweet: false,
 		isFloral: true,
-		isWeird: false,
+		isWeird: false
 	}
 })
-const Uganda = new Coffee ({
+const Uganda = new Coffee({
 	name: 'Uganda',
 	region: 'Africa',
 	country: 'Uganda',
@@ -425,11 +428,11 @@ const Uganda = new Coffee ({
 	flavorProfile: [UgandaFlavorProfile]
 })
 
-const BurundiFlavorProfile = new FlavorProfile ({
+const BurundiFlavorProfile = new FlavorProfile({
 	body: 'Full',
 	acidity: 'High',
 	notes: {
-	  isFruity: false,
+		isFruity: false,
 		isSour: true,
 		isVeggie: false,
 		isRoasted: false,
@@ -437,10 +440,10 @@ const BurundiFlavorProfile = new FlavorProfile ({
 		isNuttyCocoa: true,
 		isSweet: true,
 		isFloral: true,
-		isWeird: false,
+		isWeird: false
 	}
 })
-const Burundi = new Coffee ({
+const Burundi = new Coffee({
 	name: 'Burundi',
 	region: 'Africa',
 	country: 'Burundi',
@@ -498,8 +501,6 @@ const Rwanda = new Coffee({
 	description: '#',
 	flavorProfile: [RwandaFlavorProfile]
 })
-
-
 
 // India & The Pacific
 const IndonesiaFlavorProfile = new FlavorProfile({
@@ -600,3 +601,70 @@ const PapuaNewGuinea = new Coffee({
 	description: '#',
 	flavorProfile: [PapuaNewGuineaFlavorProfile]
 })
+
+let coffees = [
+	Hawaii,
+	Guatemala,
+	CostaRica,
+	Mexico,
+	Nicaragua,
+	ElSalvador,
+	Honduras,
+	Panama,
+	Peru,
+	Ecuador,
+	Brazil,
+	Jamaica,
+	Ethiopia,
+	Kenya,
+	Tanzania,
+	Congo,
+	Uganda,
+	Burundi,
+	Cameroon,
+	Rwanda,
+	Indonesia,
+	Vietnam,
+	India,
+	PapuaNewGuinea
+]
+
+let flavorProfiles = [
+	HawaiiFlavorProfile,
+	GuatemalaFlavorProfile,
+	CostaRicaFlavorProfile,
+	MexicoFlavorProfile,
+	NicaraguaFlavorProfile,
+	ElSalvadorFlavorProfile,
+	HondurasFlavorProfile,
+	PanamaFlavorProfile,
+	PeruFlavorProfile,
+	EcuadorFlavorProfile,
+	BrazilFlavorProfile,
+	JamaicaFlavorProfile,
+	EthiopiaFlavorProfile,
+	KenyaFlavorProfile,
+	TanzaniaFlavorProfile,
+	CongoFlavorProfile,
+	UgandaFlavorProfile,
+	BurundiFlavorProfile,
+	CameroonFlavorProfile,
+	RwandaFlavorProfile,
+	IndonesiaFlavorProfile,
+	VietnamFlavorProfile,
+	IndiaFlavorProfile,
+	PapuaNewGuineaFlavorProfile
+]
+
+Coffee.remove({})
+	.catch(err => console.log(err))
+	.then(() => {
+		console.log('coffees removed successfully')
+
+		coffees.forEach((coffee, i) => {
+			coffees[i].flavorProfile.push(flavorProfiles[i])
+			coffees[i].save((err, coffee) => {
+				err ? console.log('error creating coffee') : console.log(coffee)
+			})
+		})
+	})
