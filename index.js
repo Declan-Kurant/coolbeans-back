@@ -25,7 +25,7 @@ app.get('/coffees', (req, res) => {
 		})
 })
 
-app.get('coffees/:id', (req, res) => {
+app.get('/coffees/:id', (req, res) => {
 	Coffee.findById(req.params.id)
 		.then(coffee => {
 			res.json(coffee)
