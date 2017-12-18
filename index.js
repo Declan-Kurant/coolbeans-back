@@ -26,7 +26,7 @@ app.get('/coffees', (req, res) => {
 
 app.get('coffees/:id', (req, res) => {
 	Coffee.findById(req.params.id)
-		.then(thing => {
+		.then(coffee => {
 			res.json(thing)
 		})
 		.catch(err => {
@@ -45,7 +45,7 @@ app.post('/coffees', (req, res) => {
 })
 
 app.delete('/coffees/:id', (req, res) => {
-	Thing.findByIdAndRemove(req.params.id)
+	Coffee.findByIdAndRemove(req.params.id)
 		.then(coffee => {
 			res.json(coffee)
 		})
