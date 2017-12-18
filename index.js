@@ -3,9 +3,10 @@ const parser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('./db/schema')
 
-const app = express()
+const Schema = require('./db/schema')
+const Coffee = Schema.Coffee
 
-const Coffee = mongoose.model('Coffee')
+const app = express()
 
 app.use(parser.json())
 app.use(cors())
