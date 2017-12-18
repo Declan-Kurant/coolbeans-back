@@ -629,40 +629,12 @@ let coffees = [
 	PapuaNewGuinea
 ]
 
-let flavorProfiles = [
-	HawaiiFlavorProfile,
-	GuatemalaFlavorProfile,
-	CostaRicaFlavorProfile,
-	MexicoFlavorProfile,
-	NicaraguaFlavorProfile,
-	ElSalvadorFlavorProfile,
-	HondurasFlavorProfile,
-	PanamaFlavorProfile,
-	PeruFlavorProfile,
-	EcuadorFlavorProfile,
-	BrazilFlavorProfile,
-	JamaicaFlavorProfile,
-	EthiopiaFlavorProfile,
-	KenyaFlavorProfile,
-	TanzaniaFlavorProfile,
-	CongoFlavorProfile,
-	UgandaFlavorProfile,
-	BurundiFlavorProfile,
-	CameroonFlavorProfile,
-	RwandaFlavorProfile,
-	IndonesiaFlavorProfile,
-	VietnamFlavorProfile,
-	IndiaFlavorProfile,
-	PapuaNewGuineaFlavorProfile
-]
-
 Coffee.remove({})
 	.catch(err => console.log(err))
 	.then(() => {
 		console.log('coffees removed successfully')
 
 		coffees.forEach((coffee, i) => {
-			coffees[i].flavorProfile.push(flavorProfiles[i])
 			coffees[i].save((err, coffee) => {
 				err ? console.log('error creating coffee') : console.log(coffee)
 			})
