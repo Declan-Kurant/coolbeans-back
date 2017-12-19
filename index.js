@@ -11,10 +11,6 @@ const app = express()
 app.use(parser.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
-	res.redirect('/welcome')
-})
-
 app.get('/coffees', (req, res) => {
 	Coffee.find()
 		.then(coffees => {
