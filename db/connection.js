@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/cool-beans', { userMongoClient: true })
+if (process.env.NODE_ENV == 'production') {
+	mongoose.connect(process.env.ds161446.mlab.com:61446/cool-beans)
+} else {
+	mongoose.connect('mongodb://localhost/cool-beans', { userMongoClient: true })
+}
 
 mongoose.Promise = Promise
 
