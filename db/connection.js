@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/cool-beans', { userMongoClient: true })
+mongoose.connect('mongodb://localhost/cool-beans', { useMongoClient: true })
 
 mongoose.Promise = Promise
 
