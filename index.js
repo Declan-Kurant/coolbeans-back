@@ -11,10 +11,6 @@ const app = express()
 app.use(parser.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
-	res.redirect('/welcome')
-})
-
 app.get('/coffees', (req, res) => {
 	Coffee.find()
 		.then(coffees => {
@@ -65,6 +61,6 @@ app.put('/coffees/:id', (req, res) => {
 		})
 })
 
-app.listen(3001, () => {
-	console.log('app listening on port 3001')
+app.listen(process.env.PORT || 3001, function() {
+	console.log('Express server is up and running!')
 })
