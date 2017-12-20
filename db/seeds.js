@@ -569,7 +569,7 @@ const Vietnam = new Coffee({
 	name: 'Vietnam',
 	region: 'India & The Pacific',
 	country: 'Vietnam',
-	imgUrl: 'https://images.cafeimports.com/COuntry_Page_maps_button_.jpg',
+	imgUrl: 'https://i.imgur.com/g0UhJqY.jpg',
 	description:
 		'What makes Vietnamese coffee distinct? Vietnamese coffee is almost always Robusta, while the usual coffee bean is Arabica. Robusta is almost twice as strong caffeine wise, making it a bit more bitter, as caffeine itself is bitter. Furthermore, it has 60% less lipid (fat) and sugar than Arabica, so the taste is sharp and less casual than your usual cup of coffee. Unlike Arabica, which is mellow and easy-drinking, Robusta is often compared to burnt tires and rubbery in taste with a thick lingering taste and higher acidity. While this might turn away the head of a serial Starbucks fan, for many Vietnamese, only the strength of Robusta is the way to go. ',
 	flavorProfile: [VietnamFlavorProfile]
@@ -595,7 +595,7 @@ const India = new Coffee({
 	name: 'India',
 	region: 'India & The Pacific',
 	country: 'India',
-	imgUrl: 'https://images.cafeimports.com/COuntry_Page_maps_button_-3.jpg',
+	imgUrl: 'https://i.imgur.com/GHCnidg.jpg',
 	description:
 		'Resting of Indian coffee may go on for as long as three years and results in a strengthening of the coffee’s sweetness, often creating intense woody and loamy sensations – and a weakening of the acidity.',
 	flavorProfile: [IndiaFlavorProfile]
