@@ -22,8 +22,10 @@ app.get('/coffees', (req, res) => {
 })
 
 app.get('/coffees/:id', (req, res) => {
+	console.log(req.params)
 	Coffee.findById(req.params.id)
 		.then(coffee => {
+			console.log(coffee)
 			res.json(coffee)
 		})
 		.catch(err => {
@@ -52,7 +54,10 @@ app.delete('/coffees/:id', (req, res) => {
 })
 
 app.put('/coffees/:id', (req, res) => {
-	Coffee.findByIdAndUpdate(req.body)
+	console.log(`params: ${req.params}`)
+	console.log(`body: ${req.body}`)
+
+	Coffee.findByIdAndUpdate(req.params.id, req.body)
 		.then(coffee => {
 			res.json(coffee)
 		})
